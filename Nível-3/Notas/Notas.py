@@ -32,7 +32,7 @@ def main(notas_aluno):
     print(f"A Menor Nota do Aluno foi: {menor}")
     situacao = situacao_aluno(media)
     print(f"A Situacao do aluno: {situacao}")
-    print("---------------------------------------------------")
+    
 main(notas_aluno)
 
 
