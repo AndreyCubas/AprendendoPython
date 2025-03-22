@@ -5,32 +5,35 @@ def pedir_notas ():
         notas.append(nota)
     return notas
 
-def printar_notas():
-    for nota in notas:
-        print(f"As Notas foram: {nota}")
-
-def media_notas():
-    media = sum(notas) / len(notas)
-    print(f"Sua média é: {media}")
-    return media
-
-#
-# def status():
-#   media_notas
-#   if(media > 5.9):
-#       print("Aluno esta aprovado")
-#   else: 
-#       print("Aluno esta aprovado")
-#
-
-def maior_e_menor(notas):
-    maior = max(notas)
-    menor = min(notas)
-    print(f"A maior nota foi: {maior}")
-    print(f"A menor nota foi: {menor}")
-    return maior, menor
 print("Ola o sistema quer suas notas, informe abaixo: ")
-pedir_notas()
-maior_e_menor()
+notas_aluno = pedir_notas()
+
+def maior_notas (notas_aluno):
+    return max(notas_aluno)
+
+def menor_notas (notas_aluno):
+    return min(notas_aluno)
+
+def media_notas(notas_aluno):
+    return sum(notas_aluno) / len(notas_aluno)
+
+def situacao_aluno (media):
+    return "Aprovado!" if media > 5.9 else "Reprovado!"
+
+
+
+def main(notas_aluno):
+    print("---------------------------------------------------")
+    media = media_notas(notas_aluno)
+    print(f"A Media do Aluno foi: {media}")
+    maior = maior_notas(notas_aluno)
+    print(f"A Maior Nota do Aluno foi: {maior}")
+    menor = menor_notas(notas_aluno)
+    print(f"A Menor Nota do Aluno foi: {menor}")
+    situacao = situacao_aluno(media)
+    print(f"A Situacao do aluno: {situacao}")
+    print("---------------------------------------------------")
+main(notas_aluno)
+
 
 
